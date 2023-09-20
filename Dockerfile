@@ -20,9 +20,6 @@ COPY . ./
 # Install your dependencies
 RUN yarn
 
-# Build your code
-RUN yarn build
-
 # Expose the port
 EXPOSE 1337
 EXPOSE 80
