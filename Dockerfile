@@ -18,12 +18,12 @@ WORKDIR /usr
 COPY . ./
 
 # Install your dependencies
-RUN yarn
+RUN npm install
 
 # Expose the port
 EXPOSE 1337
 EXPOSE 80
 
 # Run the app
-CMD yarn build
-CMD yarn start
+CMD npm run build
+CMD npm run start
