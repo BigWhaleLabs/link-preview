@@ -28,4 +28,4 @@ EXPOSE 1337
 EXPOSE 80
 
 # Run the app
-CMD yarn distribute
+CMD yarn start
