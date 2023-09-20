@@ -17,6 +17,8 @@ WORKDIR /usr
 # Copy the app
 COPY . ./
 
+ENV NODE_OPTIONS=--openssl-legacy-provider
+
 # Install your dependencies
 RUN npm install
 RUN npm run build
