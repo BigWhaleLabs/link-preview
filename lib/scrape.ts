@@ -1,7 +1,6 @@
 import { DirectNavigationOptions } from 'puppeteer';
 import puppeteer from 'puppeteer-extra';
 import StealthPlugin from 'puppeteer-extra-plugin-stealth';
-import AdblockerPlugin  from 'puppeteer-extra-plugin-adblocker';
 import cheerio from 'cheerio';
 import axios from 'axios';
 import UserAgent from 'user-agents';
@@ -97,9 +96,7 @@ const stealthScrapeUrl = async (url: string, options?: ScrapeOptions) => {
   let html;
   let largestImage;
 
-  await puppeteer.use(StealthPlugin()).use(AdblockerPlugin({ 
-    blockTrackers: true 
-  })).launch({
+  await puppeteer.use(StealthPlugin()).launch({
     args: ['--no-sandbox',"--single-process"] 
   }).then(async browser => {
 
